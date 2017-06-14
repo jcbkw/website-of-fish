@@ -187,7 +187,7 @@ Interior Pages
 ****************/
 .secondary-section {
   margin-bottom: 40px;
-  background-color:#7eeeaf;
+  
   
 }
 .column {
@@ -203,7 +203,6 @@ Interior Pages
 Buttons
 ****************/
 .button {
-
   border: 2px solid #333;
   color: #333;
   padding: 10px 0;
@@ -212,7 +211,16 @@ Buttons
   text-align: center;
   letter-spacing: 1.5px;
   font-weight: bold;
+  -webkit-transition: .25s all ease-in-out;
+  transition: .25s all ease-in-out;
 
+}
+
+.button:focus,
+.button:hover {
+
+  background-color: #333;
+  color: #fff;
 }
 
 .button-narrow {
