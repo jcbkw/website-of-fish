@@ -114,7 +114,40 @@ p {
   line-height: 1.6;
   margin-bottom: 20px;
 }
-
+/***************
+Modular Styles
+***************/
+.float-left {
+  float: left; 
+}
+.float-right {
+  float: right; 
+}
+.clear {
+  clear: both; 
+}
+.bold {
+  font-weight: bold; 
+}
+.hidden,
+.hide {
+  display: none; 
+}
+.relative {
+  position: relative; 
+}
+.absolute {
+  position: absolute; 
+}
+.block {
+  display: block; 
+}
+.inline-block {
+  display: inline-block; 
+}
+.text-centered {
+  text-align: center; 
+}
 /****************
 Interior Pages
 ****************/
@@ -179,6 +212,19 @@ Buttons
   text-align: center;
   letter-spacing: 1.5px;
   font-weight: bold;
+
+}
+
+.button-narrow {
+
+  width: 25%;
+
+} 
+
+.button-alt {
+  
+  color: white;
+  border-color: white;
 
 }
 
