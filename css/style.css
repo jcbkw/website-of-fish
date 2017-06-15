@@ -148,22 +148,38 @@ Modular Styles
 .text-centered {
   text-align: center; 
 }
-
-
 /****************
 nav
 ****************/
-.primary-nav{
+nav {
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0; 
+}
+nav figure {
+  position:absolute;
+  top: -20px;
+  left: 50px;
+}
+nav img {
+  width: 160px;
+}
+.primary-nav {
   float:right;
 }
 .primary-nav > li {
  float: left;
 }
-.primary-nav > li a {
+.primary-nav > li > a {
 float:left;
 padding: 25px 0;
 width: 150px;
 border-left: 1px solid #ada791;
+}
+.primary-nav > li:first-child > a {
+border: none;
 }
 nav li a {
   font-family: Arial, Helvetica, sans-serif;
@@ -182,6 +198,39 @@ nav li a.active {
   background-color: #eb2428;
   color: #fff; 
 }
+
+/****************
+nav
+****************/
+.has-submenu ul {
+ position: absolute;
+ top: 70px;
+ background-color: #fff;
+ border-left: 1px solid #ada791;
+ border-right: 1px solid #ada791;
+ border-bottom: 1px solid #ada791;
+ width: 150px;
+ border-radius: 0 0 15px 15px;
+ overflow: hidden;
+ display: none;
+}
+.has-submenu:hover ul {
+  display: block;
+}
+.has-submenu a {
+  display:block;
+  padding: 20px 0;
+  -webkit-animation-name: slideDown;
+  -webkit-animation-duration: .25s;
+  -webkit-animation-timing-function: ease;
+}
+@-webkit-keyframes slideDown {
+  0% {-webkit-transform: translateY(-100%); opacity:0;}
+  90% {-webkit-transform: translateY(10%);}
+  100% {-webkit-transform: translateY(0%); opacity:1;}
+}
+
+
 /****************
 Interior Pages
 ****************/
@@ -293,6 +342,7 @@ Go Premium
   width: 600px;
   margin-right: 60px;
   float: left;
+  margin-top:125px;
 }
 .go-premium {
   width: 300px;
