@@ -68,6 +68,13 @@ strong {
 img, iframe, video, object {
   max-width: 100%; 
 }
+html{
+  box-sizing: border-box;
+}
+*, *:before,*:after {
+  box-sizing: inherit;
+}
+
 /***************
 Global
 ***************/
@@ -79,7 +86,8 @@ Global
 }
 .wrapper {
   margin: 0 auto;
-  width: 960px;
+  width: 90%;
+  max-width: 960px;
 }
 
 .clear {
@@ -157,7 +165,8 @@ nav {
   left: 0;
   right: 0;
   top: 0;
-  box-shadow: 0 8px 15px rgba(0,0,0,.1);  
+  box-shadow: 0 8px 15px rgba(0,0,0,.1);
+
 }
 nav figure {
   position:absolute;
@@ -165,6 +174,7 @@ nav figure {
   left: 50px;
   -webkit-animation: crazyShark 1s ease;
   animation: crazyShark 1s ease;
+  width: 160px;
 }
 @-webkit-keyframes crazyShark {
   0% {-webkit-transform: translate(90%, 70%); opacity:0;}
@@ -178,11 +188,12 @@ nav figure {
   66% {transform: translate(10%, 50%);}
   100% {transform: translate(0%); opacity:1;}
 }
-nav img {
-  width: 160px;
-}
 .primary-nav {
   float:right;
+}
+
+.primary-nav.active{
+  max-height: 350px;
 }
 .primary-nav > li {
  float: left;
@@ -194,7 +205,7 @@ width: 150px;
 border-left: 1px solid #ada791;
 }
 .primary-nav > li:first-child > a {
-border: none;
+border-left: none;
 }
 nav li a {
   font-family: Arial, Helvetica, sans-serif;
@@ -246,8 +257,8 @@ Drop Down Menu
   padding: 20px 0;
   position: relative;
   z-index: 10;
-  
- }
+  }
+
 /****************
 Interior Pages
 ****************/
@@ -280,9 +291,12 @@ Interior Pages
 }
 .content-block .figure {
   float: left;
-  margin: 30px;
-  border: 10px solid white;
+  margin: 30px 3.125%; /*30/960 we are only concerned about the left and right widths for responsive change in this exercise.*/
+  border: 15px solid white;
   overflow: hidden;
+  box-sizing: border-box;
+  width: 23.95833333333333%; /*230/960*/
+  
 }
 
 .content-block .figure img {
@@ -303,13 +317,11 @@ transform: rotate(15deg) scale(1.25, 1.25);
 ****************/
 .secondary-section {
   margin-bottom: 40px;
-  
-  
 }
 .column {
   float: left;
-  width: 300px;
-  margin-left: 30px;
+  width: 31.25%; /*300/960 */
+  margin-left: 3.125%; /*30/960 */
 }
 .column:first-child {
   margin-left: 0;
@@ -356,13 +368,13 @@ button a {
 Go Premium
 ****************/
 .intro-content {
-  width: 600px;
-  margin-right: 60px;
+  width: 62.5%; /* 600/960 */ 
+  margin-right: 6.25%;/* 60/960 */ 
   float: left;
   margin-top:125px;
 }
 .go-premium {
-  width: 300px;
+  width: 31.25%; /* 300/960 */ 
   float: left;
   margin-top: 125px;
 }
@@ -393,8 +405,90 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33d3ff', end
   background: none;
 }
 
+/****************
+Start of Media Queries
+****************/
+@media screen and (max-width: 1023px) {
+  .intro-content {
+    float:none;
+    width: auto;
+    padding-botton: 0;
+    margin-botton: 30px;
+  }
+  .go-premium {
+    margin-top:0px;
+    width:auto;
+    float: none;
+  }
+  .column {
+    width: auto;
+    float:none;
+  }
+  .column figure {
+    max-width: 250px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .column h2 {
+    text-align: center;
+  }
+  
+  /* close media query*/
+  @media screen and (max-width: 900px) {
 
+  .mobile-menu-icon{
+  background:url('../images/mobile-menu-icon.png') 0 0 no-repeat;
+  width: 30px;
+  height: 26px;
+  float: right;
+  margin: 10px 15px 10px 0;
+  cursor: pointer; 
+}
 
+.mobile-menu-icon.open{
+  background: url('../images/mobile-menu-close-icon.png') 0 0 no-repeat;
+}
+
+  nav {
+    position: static;
+  }
+  nav figure {
+    width: 100px;
+    top: 0;
+    left: 20px;
+  }
+  .primary-nav {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: all ease-in-out .25s;
+    transition: all ease-in-out .25s;
+  }
+  .primary-nav > li {
+    float: right;
+    width: 100%;
+  }
+  .primary-nav li a {
+    text-align: right;
+    padding: 15px 25px 15px 0;
+    width: 100%;
+    border-bottom: 1px solid #e7e7e7;
+    border-left: none;
+    font-size: 13px;
+  }
+  .has-submenu ul {
+    position: static;
+    display: block;
+    border: none;
+    border-radius: 0;
+    width: 100%;
+  }
+  .has-submenu:hover ul {
+    -webkit-animation: none;
+    animation: none;
+  }
+
+} /* close media query */
 
 
 
