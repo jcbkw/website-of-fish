@@ -74,6 +74,13 @@ html{
 *, *:before,*:after {
   box-sizing: inherit;
 }
+/***************
+Fonts
+***************/
+@font-face {
+  font-family: 'League Gothic';
+  src:url('../fonts/LeagueGothic-Regular.otf');
+}
 
 /***************
 Global
@@ -117,6 +124,9 @@ h2 {
   margin-bottom: 10px;
   color: #eb2428;
   font-weight: 700; 
+}
+h1, h2, p {
+  font-family: "League Gothic", Arial, Helvetica, sans-serif;
 }
 p {
   line-height: 1.6;
