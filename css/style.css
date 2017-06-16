@@ -156,12 +156,27 @@ nav {
   position: fixed;
   left: 0;
   right: 0;
-  top: 0; 
+  top: 0;
+  box-shadow: 0 8px 15px rgba(0,0,0,.1);  
 }
 nav figure {
   position:absolute;
   top: -20px;
   left: 50px;
+  -webkit-animation: crazyShark 1s ease;
+  animation: crazyShark 1s ease;
+}
+@-webkit-keyframes crazyShark {
+  0% {-webkit-transform: translate(90%, 70%); opacity:0;}
+  33% {-webkit-transform: translate(40%, 20%);}
+  66% {-webkit-transform: translate(10%, 50%);}
+  100% {-webkit-transform: translate(0%); opacity:1;}
+}
+@keyframes crazyShark {
+  0% {transform: translate(90%, 70%); opacity:0;}
+  33% {transform: translate(40%, 20%);}
+  66% {transform: translate(10%, 50%);}
+  100% {transform: translate(0%); opacity:1;}
 }
 nav img {
   width: 160px;
@@ -200,10 +215,11 @@ nav li a.active {
 }
 
 /****************
-nav
+Drop Down Menu
 ****************/
 .has-submenu ul {
  position: absolute;
+ z-index: 5;
  top: 70px;
  background-color: #fff;
  border-left: 1px solid #ada791;
@@ -216,10 +232,6 @@ nav
 }
 .has-submenu:hover ul {
   display: block;
-}
-.has-submenu a {
-  display:block;
-  padding: 20px 0;
   -webkit-animation-name: slideDown;
   -webkit-animation-duration: .25s;
   -webkit-animation-timing-function: ease;
@@ -229,8 +241,13 @@ nav
   90% {-webkit-transform: translateY(10%);}
   100% {-webkit-transform: translateY(0%); opacity:1;}
 }
-
-
+.has-submenu a {
+  display:block;
+  padding: 20px 0;
+  position: relative;
+  z-index: 10;
+  
+ }
 /****************
 Interior Pages
 ****************/
