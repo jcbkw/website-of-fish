@@ -151,7 +151,7 @@ Global
 
 body {
   background-color: #dcdcdc;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Driod Serif', Georgia, 'Times New Roman', Times, serif;
   font-weight: 100;
   font-size: 16px; 
 }
@@ -164,20 +164,19 @@ h1 {
   font-size: 80px;
   color: #0072ae;
   margin-bottom: 10px;
-  font-family: "League Gothic";
-  font-style: normal; 
+  font-family: "Maven Pro", Ariel, sans-serif;
+  font-style: normal;
+  font-weight: bold; 
 }
 h2 {
   font-size: 30px;
   margin-bottom: 10px;
   color: #eb2428;
   font-weight: 700;
-  font-family: "League Gothic";
+  font-family: "Maven Pro", Ariel, sans-serif;
   font-style: italic; 
 }
-h1, h2 {
-  font-family: "League Gothic", Arial, Helvetica, sans-serif;
-}
+
 p {
   line-height: 1.6;
   margin-bottom: 20px;
@@ -458,6 +457,54 @@ Go Premium
   border-color: #0072ae;
   color: #0072ae;
   background: none;
+}
+
+/***************
+Footer
+***************/
+footer {
+  background: #fff url('../images/seaweed.jpg') repeat-x 0 0;
+  padding: 142px 0;
+  font-size: 14px;
+  line-height: 1.7; 
+}
+footer ul {
+  float: left;
+  margin: 0 100px 50px 0; 
+}
+footer .list-heading {
+  text-transform: uppercase;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 17px; 
+  font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
+}
+footer a {
+  color: #333;
+}
+
+footer .icon {
+  margin-right: 10px;
+  font-size: 30px;
+  -webkit-transition: .25s color ease-in-out;
+  -moz-transition: .25s color ease-in-out;
+  -o-transition: .25s color ease-in-out;
+  transition: .25s color ease-in-out;
+}
+
+footer a:hover .icon {
+  color: #f00;
+} 
+footer li, footer p {
+  color: #4D4D4D; 
+  line-height: 30px;
+}
+footer li {
+  margin-bottom: 10px;
+}
+.legal-copy {
+  text-align: right;
+  font-size: 10px;
 }
 
 /****************
