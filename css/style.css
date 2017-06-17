@@ -572,6 +572,49 @@ footer li {
 }/* end of media query */
 
 /***************************
+Modal
+***************************/
+.modal {
+  width: 400px;
+  position: absolute;
+  top: 200px;
+  right: 720px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px #454545;
+  font-size: small;
+  overflow: hidden;
+  display: none;
+  opacity: 0;
+  transition: all ease-out;
+}
+
+.modal.active{
+  display: block;
+  opacity: 1;
+}
+
+.modal-header {
+  background-color: #7db9e8;
+  padding: 10px;
+}
+.modal-header,
+.modal-header h2 {
+  color: white;
+}
+.modal-header h2 {
+  font-family: 'Maven Pro', Arial, sans-serif;
+  font-style: italic;
+}
+.modal span {
+  float: right;
+}
+.modal-context {
+  padding: 15px;
+}
+
+
+/***************************
 Retina, Background Images 
 ***************************/
 /*@media
