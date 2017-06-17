@@ -585,13 +585,10 @@ Modal
   font-size: small;
   overflow: hidden;
   display: none;
-  opacity: 0;
-  transition: all ease-out;
 }
 
 .modal.active{
   display: block;
-  opacity: 1;
 }
 
 .modal-header {
