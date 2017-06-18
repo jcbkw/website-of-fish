@@ -4,11 +4,22 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
+<!-- mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
 <!-- description -->
 	<title>Movies - Mastering CSS</title>
+	
+<!-- mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
 
 <!-- stylesheets -->
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/icons.css">
+
+<!-- fonts -->
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700|Maven+Pro:400,700' rel='stylesheet' type='text/css'>
 
 <!-- stylesheets for older browsers -->	
 	<!-- ie6/7 micro clearfix -->
@@ -31,13 +42,14 @@
 Nav
 ===============
 -->
- <nav class="grouping">
-	 <figure>
-		 <img src="images/sharky.png" alt="Shark">
-	 </figure>
-	 <ul class="primary-nav grouping">
+<nav class="grouping">
+	<figure>
+		<img src="images/sharky.png" alt="Shark">
+	</figure>
+	<div class="mobile-menu-icon"></div>
+	<ul class="primary-nav grouping">
 		<li><a href="index.html">Home</a></li>
-		<li class="has-submenu"><a href="shark-movies.html" class="active">Movies</a>
+		<li class="has-submenu"><a class="active" href="shark-movies.html">Movies</a>
 			<ul>
 				<li><a href="">Jaws</a></li>
 				<li><a href="">Sharknado</a></li>
@@ -46,9 +58,8 @@ Nav
 		</li>
 		<li><a href="#">Species</a></li>
 		<li><a href="#">Chum</a></li>
-	 </ul>
- </nav>
-
+	</ul>
+</nav>
 
 <!--
 ====================
@@ -57,9 +68,9 @@ Intro Section
 -->
 
 
-<section class="section-intro">
+<section class="section-intro grouping">
 	<div class="wrapper">
-		<div class="intro-content float-left">
+		<div class="intro-content">
 			<h1>Best Movies</h1>
 			<h2>From Jaws to Sharknado, these are the best...</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est quis ducimus blanditiis delectus incidunt cumque reprehenderit distinctio aliquid vero itaque!</p>
@@ -72,7 +83,7 @@ Intro Section
 <section id="jaws" class="content-block style-1 wave-border grouping">
 	<div class="wrapper">
 		<a href="#" class="figure">
-			<img src="images/jaws.jpg" alt="Jaws movie">
+			<img src="images/jaws@1.5x.jpg" alt="Jaws movie">
 		</a>
 		<h1>Jaws</h1>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa totam magni repudiandae quibusdam corrupti delectus dignissimos officia error fuga recusandae, tempora vel qui minus nulla cumque molestiae hic dolores officiis optio deserunt reiciendis id suscipit temporibus, iure? Voluptate optio doloremque odit cum blanditiis cumque itaque ipsum doloribus, dolore repudiandae numquam perspiciatis omnis maxime ratione molestias quod porro eaque, suscipit nemo assumenda! Reprehenderit expedita ea, ipsam recusandae inventore doloribus esse accusamus aliquid, saepe blanditiis ipsum dignissimos iste id pariatur ut praesentium dicta earum ad cupiditate aliquam. Non, modi, sequi. Incidunt, vel! Reprehenderit expedita ea, ipsam recusandae inventore doloribus esse accusamus aliquid, saepe blanditiis ipsum dignissimos iste id pariatur ut praesentium dicta earum ad cupiditate aliquam. Non, modi, sequi. Incidunt, vel!</p>
@@ -99,6 +110,39 @@ Intro Section
 		<a href="" class="button button-narrow button-alt float-right">Learn More</a>
 	</div><!-- end of wrapper -->
 </section>
+<!-- 
+================ 
+Footer
+================
+-->	
+<footer>
+	<div class="wrapper grouping">
+		<ul>
+			<li class="list-heading">Social</li>
+			<li><a href=""><span class="icon fi-social-facebook"></span>Facebook</a></li>
+			<li><a href=""><span class="icon fi-social-twitter"></span>Twitter</a></li>
+			<li><a href=""><span class="icon fi-social-google-plus"></span>Google+</a></li>
+			<li><a href=""><span class="icon fi-social-dribbble"></span>Dribble</a></li>
+		</ul>
+		<ul>
+			<li class="list-heading">Interwebs</li>
+			<li><a href=""><span class="icon fi-social-github"></span>Github</a></li>
+			<li><a href=""><span class="icon fi-social-stack-overflow"></span>Stack Overflow</a></li>
+			<li><a href=""><span class="icon fi-social-zurb"></span>Zurb Foundation</a></li>
+		</ul>
+		<ul>
+			<li class="list-heading">Resources</li>
+			<li><a href=""><span class="icon fi-social-smashing-mag"></span>Smashing Mag</a></li>
+			<li><a href=""><span class="icon fi-social-treehouse"></span>Treehouse</a></li>
+			<li><a href=""><span class="icon fi-social-designer-news"></span>Designer News</a></li>
+		</ul>
+		<p class="legal-copy clear">Ol' Chompy - The Shark Site</p>
 
+	</div><!-- end wrapper -->
+</footer>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/retina.js"></script>
+<script src="js/scripts.js"></script>
 </body>
 </html>

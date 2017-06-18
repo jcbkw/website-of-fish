@@ -3,13 +3,18 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
+<!-- mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 <!-- description -->
 	<title>Section 3-Floats - Mastering CSS</title>
 	
 
 <!-- stylesheets -->
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/icons.css">
+
+<!-- fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700|Maven+Pro:400,700" rel="stylesheet">
 
 <!-- stylesheets for older browsers -->	
 	<!-- ie6/7 micro clearfix -->
@@ -36,6 +41,7 @@ Nav
 	 <figure>
 		 <img src="images/sharky.png" alt="Shark">
 	 </figure>
+	 <div class="mobile-menu-icon"></div>
 	 <ul class="primary-nav grouping">
 		<li><a href="#">Home</a></li>
 		<li class="has-submenu"><a href="shark-movies.html">Movies</a>
@@ -61,7 +67,7 @@ Nav
 	   	</div> <!--end of intro-content-->
 		<div class="go-premium">
 			<a href="#" class="call-to-action"> Go Premium </a>
-			<p class="text-centered">So many aweseome features when you go premium.<a href="#">Learn more &raquo;</a></p>
+			<p class="text-centered">So many aweseome features when you go premium.<a href="#"> Learn more &raquo;</a></p>
 		</div> <!--end of go premium-->
 	</div><!--End of wrapper-->
 </section><!-- end section -->
@@ -74,28 +80,78 @@ Secondary Sections
 	<div class="wrapper">
 		<div class="column">
 			<figure>
-				<img src="images/octopus-icon.png" alt="Octopus">
+				<img src="images/octopus-icon.svg" alt="Octopus">
 			</figure>
 			<h2>The Octopus</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quas amet nulla eveniet ratione, facere est assumenda itaque obcaecati adipisci. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quas amet nulla eveniet ratione, facere est assumenda itaque obcaecati adipisci. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quas amet nulla eveniet ratione, facere est assumenda itaque obcaecati adipisci. </p>
 			<a href="#" class="button">Tenticals &raquo;</a>
 		</div>
 		<div class="column">
-			<figure><img src="images/crab-icon.png" alt="Crab"></figure>
+			<figure><img src="images/crab-icon.svg" alt="Crab"></figure>
 			<h2>The Crab</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident quasi aliquam, sapiente quisquam sed, numquam illo autem voluptas ut eos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quas amet nulla eveniet ratione, facere est assumenda itaque obcaecati adipisci. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quas amet nulla eveniet ratione, facere est assumenda itaque obcaecati adipisci.</p>
 			<a href="#" class="button">Crabby &raquo;</a>
 		</div>
 		<div class="column">
-			<figure><img src="images/whale-icon.png" alt="Whale"></figure>
+			<figure><img src="images/whale-icon.svg" alt="Whale"></figure>
 			<h2>The Whale</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quas amet nulla eveniet ratione, facere est assumenda itaque obcaecati adipisci. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quas amet nulla eveniet ratione, facere est assumenda itaque obcaecati adipisci. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quas amet nulla eveniet ratione, facere est assumenda itaque obcaecati adipisci. </p>
 			<a href="#" class="button">Stuart &raquo;</a>
 		</div>
 	</div>
-	
 </section>
+<!-- 
+================ 
+Footer
+================
+-->	
+<footer>
+	<div class="wrapper grouping">
+		<ul>
+			<li class="list-heading">Social</li>
+			<li><a href=""><span class="icon fi-social-facebook"></span>Facebook</a></li>
+			<li><a href=""><span class="icon fi-social-twitter"></span>Twitter</a></li>
+			<li><a href=""><span class="icon fi-social-google-plus"></span>Google+</a></li>
+			<li><a href=""><span class="icon fi-social-dribbble"></span>Dribble</a></li>
+		</ul>
+		<ul>
+			<li class="list-heading">Interwebs</li>
+			<li><a href=""><span class="icon fi-social-github"></span>Github</a></li>
+			<li><a href=""><span class="icon fi-social-stack-overflow"></span>Stack Overflow</a></li>
+			<li><a href=""><span class="icon fi-social-zurb"></span>Zurb Foundation</a></li>
+		</ul>
+		<ul>
+			<li class="list-heading">Resources</li>
+			<li><a href=""><span class="icon fi-social-smashing-mag"></span>Smashing Mag</a></li>
+			<li><a href=""><span class="icon fi-social-treehouse"></span>Treehouse</a></li>
+			<li><a href=""><span class="icon fi-social-designer-news"></span>Designer News</a></li>
+		</ul>
+		<p class="legal-copy clear">Ol' Chompy - The Shark Site</p>
 
+	</div><!-- end wrapper -->
+</footer>
+<!-- 
+===============
+modal
+===============
+-->
+<div class="modal modal-learn-more">
+	<div class="modal-header grouping">
+		<span class="close-modal"> <a href="#" class="close-overlay">close</a></span>
+		<h2>Premium Benefits</h2>
+	</div>
+	<div class="modal-context">
+		<ul>
+			<li>More shark teeth than you can handle</li>
+			<li>13 Species of octopus</li>
+			<li>Giant, ancient lobsters!</li>
+			<li>4 Whales</li>
+		</ul>
+	</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/scripts.js"></script> 
 
 </body>
 </html>
